@@ -4,6 +4,10 @@ test/
 # Ignore the data folder
 data/
 
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
 # Ignore send_email.py file
 # job_scrapper/utils/send_email.py
 

@@ -16,13 +16,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-from_email = os.getenv('SENDER_EMAIL')
+sender_email = os.getenv('SENDER_EMAIL')
 to_email = os.getenv('RECEIVER_EMAIL')
 email_password = os.getenv('EMAIL_PASS')
 
 def func_send_email(file_path):
     # Email configuration
-    from_email = from_email
+    from_email = sender_email
     from_password = email_password  # Use an app password if you have 2FA enabled
 
     # Create the email

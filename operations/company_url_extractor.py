@@ -24,7 +24,7 @@ current_directory = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(current_directory, '..', 'data')
 
 
-setup = WebDriverSetup(cookie_setting=1)
+setup = WebDriverSetup(cookie_setting=1,is_headless_mode=False)
 driver = setup.initialize_driver()
 
 def func_company_url_extractor(main_url,param_url=""):

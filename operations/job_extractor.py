@@ -33,7 +33,12 @@ def func_job_extractor():
         with open(file_path, 'r') as file:
             data = json.load(file)
         # career_urls = data
-        career_urls = [{"company_name": "Ginkgobioworks", "links": {"career_url": "http://ginkgobioworks.com/careers/", "job_link": "http://ginkgobioworks.com/careers/job-listings/"}}]
+        career_urls = [
+                        {"company_name": "Ironcladapp", "links": {"career_url": "http://ironcladapp.com/careers/", "job_link": "http://ironcladapp.com/careers/#open-positions"}},
+                       {"company_name": "Deel", "links": {"career_url": "https://www.deel.com/careers", "job_link": "https://jobs.ashbyhq.com/Deel?__hstc=29278755.0bc99ea862854c6413f505f4052d70e3.1727383892142.1727383892142.1727383892142.1&__hssc=29278755.1.1727383892142&__hsfp=3042269464"}},
+                       {"company_name": "Amplitude", "links": {"career_url": "http://amplitude.com/careers", "job_link": "https://boards.greenhouse.io/amplitude"}},
+                       {"company_name": "Careers", "links": {"career_url": "https://careers.snapeda.com/", "job_link": "https://careers.snapeda.com/#jobs-82f4bd1f"}}
+                       ]
         # career_urls = [{"company_name": "Flocksafety", "links": {"career_url": "http://flocksafety.com/careers", "job_link": "http://flocksafety.com/careers/#ashby_embed"}},
         #     {"company_name": "Odeko", "links": {"career_url": "https://odeko.com/pages/careers", "job_link": "https://boards.greenhouse.io/odeko"}},
         #     {"company_name": "Amplitude", "links": {"career_url": "http://amplitude.com/careers", "job_link": "https://boards.greenhouse.io/amplitude"}},
@@ -55,7 +60,7 @@ def func_job_extractor():
             create_excel = save_jobs_to_excel(all_jobs)
             if create_excel:
                 file_path = os.path.join(data_dir, 'jobs_output.xlsx')
-                # res = func_send_email(file_path)
+                res = func_send_email(file_path)
                 
             
     except Exception as e:
