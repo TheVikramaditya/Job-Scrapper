@@ -1,0 +1,12 @@
+# Ignore the test folder (virtual environment)
+test/
+
+# Ignore the data folder
+data/
+
+# Ignore send_email.py file
+# job_scrapper/utils/send_email.py
+
+
+# Ignore the .env file
+.env
